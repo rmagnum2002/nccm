@@ -1,0 +1,27 @@
+        <ul class="sf-menu">
+          <% if @class_index %>
+            <li class="current"><%= link_to t('Home'), root_path %></li>
+          <% else %>
+            <li><%= link_to t('Home'), root_path %></li>
+          <% end %>
+          <% if @class_about %>
+            <li class="current"><%= link_to t('About'), about_path %></li>
+          <% else %>
+            <li><%= link_to t('About'), about_path %></li>
+          <% end %>
+          <% if @class_equipment %>
+            <li class="current"><%= link_to t('Our equipment'), equipment_path %></li>
+          <% else %>
+            <li><%= link_to t('Our equipment'), equipment_path %></li>
+          <% end %>
+          <% if @class_services %>
+            <li class="current"><%= link_to t('Services'), services_path %></li>
+          <% else %>
+            <li><%= link_to t('Services'), services_path %></li>
+          <% end %>
+          <% if @class_contacts %>
+            <li class="current"><%= link_to t('Contacts'), contacts_path %></li>
+          <% else %>
+            <li><%= link_to t('Contacts'), contacts_path %></li>
+          <% end %>
+        </ul>

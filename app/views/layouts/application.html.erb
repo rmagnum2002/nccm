@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NCCM Grup SRL</title>
+  <%= stylesheet_link_tag    "scaffolds.css" %>
+  <%= javascript_include_tag "jquery-1.6.2.min.js" %> 
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript">
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(46.936078,28.78536);
+    var myOptions = {
+      zoom: 17,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    }
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title:"NCCM GRUP, Moldova, Ialoveni, Iurie Gagarin str. 1"
+    });   
+  }
+</script>
+  <%= csrf_meta_tags %>
+</head>
+<body onload="initialize()">
+  <div class="main">
+    <div class="locale_links" style="float:right;">
+      <%= raw(lang_links) %>
+    </div>
+    <div id="header">
+      <% if !@class_index %>
+        <nav>
+          <%= render :partial => "welcomes/nav" %>
+        </nav>
+      <% end %>
+        <%= link_to 'NCCM Grup', root_path, :class => "logo" %>
+      <div class="logo"></div>
+    </div>
+    <div class="box">
+      <div class="clear"></div>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

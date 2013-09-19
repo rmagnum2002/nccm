@@ -1,0 +1,33 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  Home: "Home"
+  About: "About Us"
+  Services: "Services"
+  Our equipment: "Our equipment"
+  Contacts: "Contacts"
+
+  Horizontal Directional Drill: "Horizontal Directional Drill"
+  Designed to give HDD operators what they want in a drill, highest power-to-size ratio: "Designed to give HDD operators what they want in a drill, highest power-to-size ratio"
+  Maximize your drilling muscle with the field-tested D1000x900: "Maximize your drilling muscle with the field-tested D1000x900"
+  Photo Gallery: "Photo Gallery"
+  Read More: "Read More"
+  Contact by mail: "Contact by mail"
+
+  Moldova: "Moldova"
+  Ialoveni: "Ialoveni"
+  Chisinau: "Chisinau"
+  street: "Iurie Gagarin street, 1"
+  Societatea cu Răspundere Limitată: "Limited Liability Company"
+  tel/fax: "tel / fax"
+  director: "director"
+  inginer: "engineer"
+
+  Name: "Name"
+  Email: "Email"
+  Subject: "Subject"
+  Message: "Message"
+  Your email: "Your email"
+  Your full name: "Your full name"
+  send: "Send"

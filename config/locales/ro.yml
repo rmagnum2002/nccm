@@ -1,0 +1,33 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ro:
+  Home: "Acasă"
+  About: "Despre noi"
+  Services: "Servicii"
+  Our equipment: "Utilajele noastre"
+  Contacts: "Contacte"
+
+  Horizontal Directional Drill: "Forare direcţională orizontală"
+  Designed to give HDD operators what they want in a drill, highest power-to-size ratio: "Conceput pentru a oferi operatorilor de pe HDD ceea ce doresc intr-un burghiu mai mare, raport putere - dimensiune"
+  Maximize your drilling muscle with the field-tested D1000x900: "Maximizaţi muşchi de foraj cu D1000x900 câmp testat"
+  Photo Gallery: "Galerie Foto"
+  Read More: "Mai mult"
+  Contact by mail: "Contactați-ne prin mail"
+
+  Moldova: "Moldova"
+  Ialoveni: "Ialoveni"
+  Chisinau: "Chisinau"
+  street: "strada Iurie Gagarin 1"
+  Societatea cu Răspundere Limitată: "Societatea cu Răspundere Limitată"
+  tel/fax: "tel / fax"
+  director: "director"
+  inginer: "inginer"
+
+  Name: "Nume"
+  Email: "Email"
+  Subject: "Subiect"
+  Message: "Mesaj"
+  Your email: "Indicați poșta electronică"
+  Your full name: "Indicați numele DVS deplin"
+  send: "Trimite"
