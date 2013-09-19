@@ -1,21 +1,19 @@
 <%= stylesheet_link_tag    "colorbox.css" %>
 <%= javascript_include_tag "jquery.colorbox.js" %>
 <style>
-  .group2{margin:5px;}
-  .group2 a {text-decoration:none;}
-  .group3{margin:5px;}
-  .group3 a {text-decoration:none;}
-
+.group2{margin:5px;}
+.group2 a {text-decoration:none;}
+.group3{margin:5px;}
+.group3 a {text-decoration:none;}
+.group4{margin:5px;}
+.group4 a {text-decoration:none;}
 </style>
 <script>
-			$(document).ready(function(){
-			$(".group2").colorbox({rel:'group2', transition:"fade"});
-		});
-</script>
-<script>
-			$(document).ready(function(){
-			$(".group3").colorbox({rel:'group3', transition:"fade"});
-		});
+$(document).ready(function(){
+  $(".group2").colorbox({rel:'group2', transition:"fade"});
+  $(".group3").colorbox({rel:'group3', transition:"fade"});
+  $(".group4").colorbox({rel:'group4', transition:"fade"});
+});
 </script>
 <div class="main-box">
   <div class="extra-wrap">
@@ -73,7 +71,21 @@
       <%= image_tag ('d33x44/6t.jpg') %>
     </a>
   </div>
+
+  <div id="gallery3" style="margin-top:30px;">
+    <h6>Vermeer V-8550</h6>
+    <a class="group4" href="/assets/v8550/1.jpg">
+      <%= image_tag ('v8550/1t.jpg') %>
+    </a>
+    <a class="group4" href="/assets/v8550/2.jpg">
+      <%= image_tag ('v8550/2t.jpg') %>
+    </a>
+    <a class="group4" href="/assets/v8550/3.jpg">
+      <%= image_tag ('v8550/3t.jpg') %>
+    </a>
+    <a class="group4" href="/assets/v8550/4.jpg">
+      <%= image_tag ('v8550/4t.jpg') %>
+    </a>
+  </div>
 </div>
 <div class="clear"></div>
-
-
