@@ -2,7 +2,7 @@ development:
   adapter: mysql2
   database: vermeer_development
   username: root
-  password: vrosca25022008
+  password:
   host: localhost
   encoding: utf8
 
@@ -10,6 +10,6 @@ production:
  adapter: mysql2
  database: vermeer_development
  username: root
- password: vrosca25022008
+ password:
  host: localhost
  encoding: utf8
