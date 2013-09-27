@@ -28,8 +28,8 @@
                 <ul class="dropdown-menu">
                   <li><%= link_to "Echipă", team_path %></li>
                   <li><a href="#">Tehincă</a></li>
-                  <li><a href="#">Noutăți</a></li>
-                  <li><%= link_to "Contacte", contact_path %></li>
+                  <li><%= link_to "Noutăți", posts_path %></li>
+                  <li><%= link_to "Contacte", contacts_path %></li>
 <!--                   <li class="divider"></li>
                   <li class="dropdown-header">Nav header</li>
                   <li><a href="#">Separated link</a></li>
@@ -40,7 +40,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forare Orizontală Dirijată <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Tehnologie</a></li>
-                  <li><a href="#">Calculator</a></li>
+                  <li><%= link_to "Calculator", calculator_path %></li>
                   <li><a href="#">Lucrări Îndeplinite</a></li>
                 </ul>
               </li>
@@ -53,7 +53,14 @@
 
     </div>
   </div>
-  <%= yield %>
-
+  <div class="container marketing">
+    <%= yield %>
+    <!-- FOOTER -->
+    <footer>
+      <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
+      <!-- <p>&copy; 2013 Webng, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
+    </footer>
+  </div><!-- /.container -->
+  <%= render "layouts/google_analytics" unless Rails.env.development? %>
 </body>
 </html>

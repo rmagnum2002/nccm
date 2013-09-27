@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @home_page = true
+    @posts = Post.order('id desc').limit(3)
   end
 
   def team
@@ -8,6 +9,8 @@ class WelcomeController < ApplicationController
   end
 
   def contact
-    @about_page = true
+  end
+
+  def calculator
   end
 end

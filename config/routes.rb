@@ -1,12 +1,17 @@
 Nccm::Application.routes.draw do
+  get "news" => "posts#index", as: :posts
+  get "news/:id" => "posts#show", as: :post
   get "welcome/index"
+  get "calculator" => "welcome#calculator", as: :calculator
   get "team" => "welcome#team", as: :team
-  get "contacts" => "welcome#contact", as: :contact
+  get "contacts" => "welcome#contact", as: :contacts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+
+  resources :posts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
