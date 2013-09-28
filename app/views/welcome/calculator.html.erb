@@ -1,53 +1,71 @@
-<script>
-$(function() {
-    var values = [40, 50, 63, 90, 110, 125, 140, 160, 225, 250];
-    var slider = $("#price-range").slider({
-        orientation: 'horizontal',
-        range: true,
-        min: 0,
-        max: 1000000,
-        values: [0, 1000000],
-        slide: function(event, ui) {
-            var includeLeft = event.keyCode != $.ui.keyCode.RIGHT;
-            var includeRight = event.keyCode != $.ui.keyCode.LEFT;
-            var value = findNearest(includeLeft, includeRight, ui.value);
-            if (ui.value == ui.values[0]) {
-                slider.slider('values', 0, value);
-            }
-            else {
-                slider.slider('values', 1, value);
-            }
-            $("#price-amount").html('$' + slider.slider('values', 0) + ' - $' + slider.slider('values', 1));
-            return false;
-        },
-        change: function(event, ui) {
-            getHomeListings();
-        }
-    });
-    function findNearest(includeLeft, includeRight, value) {
-        var nearest = null;
-        var diff = null;
-        for (var i = 0; i < values.length; i++) {
-            if ((includeLeft && values[i] <= value) || (includeRight && values[i] >= value)) {
-                var newDiff = Math.abs(value - values[i]);
-                if (diff == null || newDiff < diff) {
-                    nearest = values[i];
-                    diff = newDiff;
-                }
-            }
-        }
-        return nearest;
+<style type="text/css" media="screen">
+
+</style>
+<div class="page-header">
+  <h3>Calculator <!-- <small><#%= link_to "vezi toate", news_path %></small> --></h3>
+</div>
+
+<p><h3>Țeavă Metal</h3></p>
+<br><br><br>
+<div id="slider-metal">
+  <div class="metal_diameter_ruler"></div>
+</div>
+<center>Diametru</center>
+<hr>
+<br><br>
+<div id="metal-meters">
+  <div class="metal_meters_ruler"><span>| 20m</span><span style="float: right;">100m |</span></div>
+</div>
+<center>Lungime</center>
+<br><br><br>
+<div class="results">
+  diametru(mm): <input type="text" id="metal_diameter" value="50" disabled="disabled" /><br>
+  lungime(metri): <input type="text" id="metal_meters" value="20" disabled="disabled" /><br>
+  preț/m MDL: <span class="preice_m">770</span><br>
+  ----------------------------<br>
+  total MDL: <input type="text" id="total_for_metalic" value="15400" disabled="disabled" />
+</div>
+
+
+<script type="text/javascript">
+  function updateTotal(){
+    if($("#metal_diameter").val() <= 110) {
+      var meter_value = 770
     }
-});
+    else if($("#metal_diameter").val() <= 200) {
+      var meter_value = 860
+    }
+    else if($("#metal_diameter").val() > 200) {
+      var meter_value = 1200
+    }
+
+    $('.preice_m').html(meter_value);
+    $('#total_for_metalic').val($('#metal_meters').val() * meter_value);
+    // alert(diam);
+  }
+
+  $(function() {
+    var valMap = [50, 63, 90, 110, 125, 140, 160, 225, 250, 280];
+    $("#slider-metal").slider({
+      min: 0,
+      max: valMap.length - 1,
+      value: 0,
+      slide: function(event, ui) {
+        var diam = $("#metal_diameter").val(valMap[ui.value]);
+        updateTotal(diam);
+      }
+    });
+    $( "#metal-meters" ).slider({
+      min: 20,
+      max: 100,
+      value: 20,
+      slide: function(event, ui) {
+        var diam = $("#metal_meters" ).val(ui.value);
+        updateTotal(diam=false);
+      }
+    });
+  });
 </script>
 
-<p>
-  <label for="amount">Minimum number of bedrooms:</label>
-  <input type="text" id="price-amount" style="border: 0; color: #f6931f; font-weight: bold;" />
-</p>
-<div id="price-range"></div>
 
-
-[ 40, 50, 63, 90, 110, 125, 140, 160, 225, 250 ]
-250 - metal? 325 - polietilena
-https://github.com/BlakeSimpson/SteppedRangeSlider
+<!-- https://github.com/BlakeSimpson/SteppedRangeSlider -->
