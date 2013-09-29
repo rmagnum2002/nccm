@@ -13,7 +13,7 @@ class WelcomeController < ApplicationController
   end
 
   def calculator
-    @about_page = true
+    @drill_page = true
   end
 
   def plastic_calc

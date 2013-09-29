@@ -27,7 +27,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Despre Companie <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Echipă", team_path %></li>
-                  <li><a href="#">Tehincă</a></li>
+                  <li><%= link_to "Utilaje", utilities_path %></li>
                   <li><%= link_to "Noutăți", posts_path %></li>
                   <li><%= link_to "Contacte", contacts_path %></li>
 <!--                   <li class="divider"></li>
@@ -36,7 +36,7 @@
                   <li><a href="#">One more separated link</a></li> -->
                 </ul>
               </li>
-              <li class="dropdown">
+              <li class="dropdown <%= "active" if @drill_page %>">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forare Orizontală Dirijată <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Tehnologie</a></li>

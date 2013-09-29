@@ -1,5 +1,6 @@
 Nccm::Application.routes.draw do
   get "news" => "posts#index", as: :posts
+  # get "utilities" => "utilities#index", as: :utilities
   get "news/:id" => "posts#show", as: :post
   get "welcome/index"
   get "calculator" => "welcome#calculator", as: :calculator
@@ -14,6 +15,7 @@ Nccm::Application.routes.draw do
   root 'welcome#index'
 
   resources :posts
+  resources :utilities
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
