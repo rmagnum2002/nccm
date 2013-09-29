@@ -15,4 +15,10 @@ class WelcomeController < ApplicationController
   def calculator
     @about_page = true
   end
+
+  def plastic_calc
+  end
+
+  def metalic_calc
+  end
 end

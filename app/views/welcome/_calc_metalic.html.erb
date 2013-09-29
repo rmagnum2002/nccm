@@ -1,0 +1,58 @@
+<div id="slider-metal">
+  <div class="metal_diameter_ruler"></div>
+</div>
+<center>Diametru</center>
+<hr>
+<div id="metal-meters-slider">
+  <div class="metal_meters_ruler"><span>| 15m</span><span style="float: right;">100m |</span></div>
+</div>
+<center>Lungime</center>
+
+<div class="results">
+  diametru(mm): <input type="text" id="metal_diameter" value="50" disabled="disabled" /><br>
+  lungime(metri): <input type="text" id="metal_meters" value="20" disabled="disabled" /><br>
+  preț/m MDL: <span class="preice_m">770</span><br>
+  ----------------------------<br>
+  total MDL: <input type="text" id="total_for_metalic" value="15400" disabled="disabled" />
+</div>
+
+<script type="text/javascript">
+  function updateTotal(){
+    if($("#metal_diameter").val() <= 110) {
+      var meter_value = 770
+    }
+    else if($("#metal_diameter").val() <= 200) {
+      var meter_value = 860
+    }
+    else if($("#metal_diameter").val() > 200) {
+      var meter_value = 1200
+    }
+
+    $('.preice_m').html(meter_value);
+    $('#total_for_metalic').val($('#metal_meters').val() * meter_value);
+    // alert(diam);
+  }
+
+  $(function() {
+    var valMap = [50, 63, 90, 110, 125, 140, 160, 225, 250, 280];
+    $("#slider-metal").slider({
+      min: 0,
+      max: valMap.length - 1,
+      value: 0,
+      slide: function(event, ui) {
+        var diam = $("#metal_diameter").val(valMap[ui.value]);
+        updateTotal();
+      }
+    });
+    $( "#metal-meters-slider" ).slider({
+      min: 15,
+      max: 100,
+      value: 15,
+      slide: function(event, ui) {
+        var diam = $("#metal_meters" ).val(ui.value);
+        updateTotal();
+      }
+    });
+  });
+</script>
+<!-- https://github.com/BlakeSimpson/SteppedRangeSlider -->

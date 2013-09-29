@@ -5,6 +5,8 @@ Nccm::Application.routes.draw do
   get "calculator" => "welcome#calculator", as: :calculator
   get "team" => "welcome#team", as: :team
   get "contacts" => "welcome#contacts", as: :contacts
+  get "plastic_calc" => "welcome#plastic_calc", as: :plastic_calc
+  get "metalic_calc" => "welcome#metalic_calc", as: :metalic_calc
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
