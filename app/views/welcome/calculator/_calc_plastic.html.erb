@@ -1,0 +1,71 @@
+<div id="slider-metal">
+  <div class="plastic_diameter_ruler"></div>
+</div>
+<center>Diametru</center>
+<hr>
+<div id="metal-meters-slider">
+  <div class="metal_meters_ruler"><span>| 20m</span><span style="float: right;">200m |</span></div>
+</div>
+<center>Lungime</center>
+<br><br><br>
+<div class="row-fluid margin-bottom-20">
+  <div class="span12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Diametru (mm)</th>
+          <th>Lungime (m)</th>
+          <th>Preț/m MDL</th>
+          <th>Total MDL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" id="metal_diameter" value="50" disabled="disabled" /></td>
+          <td><input type="text" id="metal_meters" value="20" disabled="disabled" /></td>
+          <td><span class="preice_m">650</span></td>
+          <td><input type="text" id="total_for" value="13000" disabled="disabled" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script type="text/javascript">
+function updateTotal(){
+  if($("#metal_diameter").val() <= 150) {
+    var meter_value = 650
+  }
+  else if($("#metal_diameter").val() <= 250) {
+    var meter_value = 765
+  }
+  else if($("#metal_diameter").val() > 250) {
+    var meter_value = 930
+  }
+
+  $('.preice_m').html(meter_value);
+  $('#total_for').val($('#metal_meters').val() * meter_value);
+// alert(diam);
+}
+
+$(function() {
+  var valMap = [50, 63, 90, 110, 125, 140, 160, 225, 250, 280, 350];
+  $("#slider-metal").slider({
+    min: 0,
+    max: valMap.length - 1,
+    value: 0,
+    slide: function(event, ui) {
+      $("#metal_diameter").val(valMap[ui.value]);
+      updateTotal();
+    }
+  });
+  $( "#metal-meters-slider" ).slider({
+    min: 20,
+    max: 200,
+    value: 15,
+    slide: function(event, ui) {
+      $("#metal_meters" ).val(ui.value);
+      updateTotal();
+    }
+  });
+});
+</script>

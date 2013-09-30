@@ -1,5 +1,5 @@
 Nccm::Application.routes.draw do
-  get "news" => "posts#index", as: :posts
+  get "news" => "posts#index", as: :news
   # get "utilities" => "utilities#index", as: :utilities
   get "news/:id" => "posts#show", as: :post
   get "welcome/index"
@@ -8,6 +8,8 @@ Nccm::Application.routes.draw do
   get "contacts" => "welcome#contacts", as: :contacts
   get "plastic_calc" => "welcome#plastic_calc", as: :plastic_calc
   get "metalic_calc" => "welcome#metalic_calc", as: :metalic_calc
+  get "technology" => "welcome#technology", as: :technology
+  get "optic_fibers" => "welcome#optic_fibers", as: :optic_fibers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

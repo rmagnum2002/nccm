@@ -1,25 +1,141 @@
+<div class="row-fluid breadcrumbs margin-bottom-20">
+  <div class="container">
+        <h1 class="pull-left">Calculator</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+            <li><a href="">Features</a> <span class="divider">/</span></li>
+            <li class="active">Tables</li>
+        </ul>
+    </div><!--/container-->
+</div>
+
 <div class="container">
-<div class="page-header">
-  <h3>Calculator <small></small></h3>
-</div>
-
-<div class="calc_tabs_header">
-  <h5>
-    <span class="link_to_metalic">Țeavă Metal</span> |
-    <span class="link_to_plastic"><%= link_to 'Țeavă Polietilenă', plastic_calc_path, remote: true %></span>
-  </h5>
-</div>
-
-<div class="calc_container">
-  <%= render 'calc_metalic' %>
-</div>
-<br><br><br>
-<div class="panel panel-warning">
-  <div class="panel-heading">
-    <h3 class="panel-title">Atenție!</h3>
+  <div class="calc_tabs_header">
+    <h5>
+      <span class="link_to_metalic">Țeavă Metal</span> |
+      <span class="link_to_plastic"><%= link_to 'Țeavă Polietilenă', plastic_calc_path, remote: true %></span>
+    </h5>
   </div>
-  <div class="panel-body">
-    Prețul este arătat doar în scopuri informative și poate varia în funcție de domeniul de activitate și de distanța obiectului.
+
+  <div class="calc_container">
+    <%= render 'calc_metalic' %>
   </div>
-</div>
+  <br><br><br>
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h3 class="panel-title">Atenție!</h3>
+    </div>
+    <div class="panel-body">
+      Prețurile sunt arătate doar în scopuri informative și poate varia în funcție de domeniul de activitate și de distanța obiectului.
+    </div>
+  </div>
+  <!-- Our Clients -->
+  <div id="clients-flexslider" class="flexslider home clients">
+    <div class="headline"><h3>Our Clients</h3></div>
+    <ul class="slides">
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/hp_grey.png" alt="" />
+          <img src="assets/img/clients/hp.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/igneus_grey.png" alt="" />
+          <img src="assets/img/clients/igneus.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/vadafone_grey.png" alt="" />
+          <img src="assets/img/clients/vadafone.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/walmart_grey.png" alt="" />
+          <img src="assets/img/clients/walmart.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/shell_grey.png" alt="" />
+          <img src="assets/img/clients/shell.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/natural_grey.png" alt="" />
+          <img src="assets/img/clients/natural.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/aztec_grey.png" alt="" />
+          <img src="assets/img/clients/aztec.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/gamescast_grey.png" alt="" />
+          <img src="assets/img/clients/gamescast.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/cisco_grey.png" alt="" />
+          <img src="assets/img/clients/cisco.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/everyday_grey.png" alt="" />
+          <img src="assets/img/clients/everyday.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/cocacola_grey.png" alt="" />
+          <img src="assets/img/clients/cocacola.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/spinworkx_grey.png" alt="" />
+          <img src="assets/img/clients/spinworkx.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/shell_grey.png" alt="" />
+          <img src="assets/img/clients/shell.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/natural_grey.png" alt="" />
+          <img src="assets/img/clients/natural.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/gamescast_grey.png" alt="" />
+          <img src="assets/img/clients/gamescast.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/everyday_grey.png" alt="" />
+          <img src="assets/img/clients/everyday.png" class="color-img" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/img/clients/spinworkx_grey.png" alt="" />
+          <img src="assets/img/clients/spinworkx.png" class="color-img" alt="" />
+        </a>
+      </li>
+    </ul>
+  </div><!--/flexslider-->
+  <!-- //End Our Clients -->
 </div>

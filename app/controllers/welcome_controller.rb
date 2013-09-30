@@ -21,4 +21,11 @@ class WelcomeController < ApplicationController
 
   def metalic_calc
   end
+
+  def technology
+  end
+
+  def optic_fibers
+
+  end
 end
