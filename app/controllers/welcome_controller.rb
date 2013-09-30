@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
   end
 
   def contacts
-    @about_page = true
+    @contact_page = true
   end
 
   def calculator
