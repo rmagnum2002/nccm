@@ -1784,45 +1784,40 @@ body .ui-tooltip {
 
  */
 
-.logo a:hover {
-  text-decoration: none; }
-
-.metal_diameter_ruler, .plastic_diameter_ruler {
+.logo a:hover{text-decoration: none;}
+.metal_diameter_ruler, .plastic_diameter_ruler{
   height: 44px;
   margin-top: -45px;
-  width: 103%; }
-
-.metal_diameter_ruler {
+  width: 103%;
+}
+.metal_diameter_ruler{
   background: url(/assets/ruler_metal.png) no-repeat;
-  background-size: 100%; }
-
-.plastic_diameter_ruler {
+  background-size: 100%;
+}
+.plastic_diameter_ruler{
   background: url(/assets/ruler_plastic.png) no-repeat;
-  background-size: 100%; }
-
-.metal_meters_ruler {
-  margin-top: -25px; }
-
-#metal_diameter, #metal_meters, #total_for {
+  background-size: 100%;
+}
+.metal_meters_ruler{
+  margin-top: -25px;
+}
+#metal_diameter, #metal_meters, #total_for{
   border: 0px;
   background: transparent;
   font-size: 20px;
-  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
-  width: 75px; }
-
-#metal-meters-slider {
-  margin-top: 50px; }
-
-.preice_m {
-  font-size: 20px; }
-
-.calc_tabs_header {
-  margin-bottom: 90px; }
-
-.results {
-  margin-top: 40px; }
-
-.link_to_plastic a, .link_to_metalic a {
-  color: #3498db; }
+  -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0,0,0,0.075);
+  box-shadow: inset 0 0px 0px rgba(0,0,0,0.075);
+  width: 75px;
+}
+#metal-meters-slider{margin-top: 50px;}
+.preice_m{
+  font-size: 20px;
+}
+.calc_tabs_header{
+  margin-bottom: 90px;
+}
+.results{
+  margin-top: 40px;
+}
+.link_to_plastic a, .link_to_metalic a{color: #3498db;}
