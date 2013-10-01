@@ -1,4 +1,6 @@
 Nccm::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get "news" => "posts#index", as: :news
   # get "utilities" => "utilities#index", as: :utilities
   get "news/:id" => "posts#show", as: :post
@@ -10,6 +12,7 @@ Nccm::Application.routes.draw do
   get "metalic_calc" => "welcome#metalic_calc", as: :metalic_calc
   get "technology" => "welcome#technology", as: :technology
   get "optic_fibers" => "welcome#optic_fibers", as: :optic_fibers
+  get "equipment" => "utilities#index", as: :equipment
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
