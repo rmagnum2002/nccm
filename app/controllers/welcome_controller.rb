@@ -26,6 +26,9 @@ class WelcomeController < ApplicationController
   end
 
   def optic_fibers
+  end
 
+  def docs
+    @docs_page = true
   end
 end

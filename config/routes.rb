@@ -13,6 +13,7 @@ Nccm::Application.routes.draw do
   get "technology" => "welcome#technology", as: :technology
   get "optic_fibers" => "welcome#optic_fibers", as: :optic_fibers
   get "equipment" => "utilities#index", as: :equipment
+  get "docs" => "welcome#docs", as: :docs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

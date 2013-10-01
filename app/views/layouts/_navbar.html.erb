@@ -7,7 +7,7 @@
     </a><!-- /nav-collapse -->
     <div class="nav-collapse collapse">
       <ul class="nav top-2">
-        <li class="active"><%= link_to "Home", root_path %></li>
+        <!-- <li class="active"><%#= link_to "Acasă", root_path %></li> -->
         <li>
           <a href="" class="dropdown-toggle" data-toggle="dropdown">Companie
             <b class="caret"></b>
@@ -16,8 +16,7 @@
             <li><%= link_to "Echipă", team_path %></li>
             <li><%= link_to "Tehnică", equipment_path %></li>
             <li><%= link_to "Noutăți", news_path %></li>
-            <li><a href="page_coming_soon.html">Documente</a></li>
-            <li><%= link_to "Contacte", contacts_path %></li>
+            <li><%= link_to "Documente", docs_path %></li>
           </ul>
           <b class="caret-out"></b>
         </li>
@@ -33,6 +32,7 @@
           <b class="caret-out"></b>
         </li>
         <li><%= link_to "Linii fibre optice", optic_fibers_path %></li>
+        <li><%= link_to "Contacte", contacts_path %></li>
         <!-- <li><%#= link_to "Contacte", contacts_path %></li> -->
         <!-- <li><a class="search"><i class="icon-search search-btn"></i></a></li> -->
       </ul>
