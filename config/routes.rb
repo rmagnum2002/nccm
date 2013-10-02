@@ -15,6 +15,8 @@ Nccm::Application.routes.draw do
   get "equipment" => "utilities#index", as: :equipment
   get "docs" => "welcome#docs", as: :docs
   get "partners" => "clients#index", as: :partners
+  get "completed_tasks" => "welcome#completed_tasks", as: :completed_tasks
+  get 'set_locale' => 'welcome#set_locale'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

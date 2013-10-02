@@ -20,4 +20,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  menu:
+    languages: "languages"
+    company: "company"
+    team: "Team"
+    utilities: "Utilities"
+    news: "News"
+    docs: "Documents"
+    partners: "Partners"
+    drill: "Horizontal Directional Drilling"
+    tehnology: "Technology"
+    calculator: "Calculator"
+    complete_tasks: "Completed tasks"
+    optics: "optic fibers"
+    contacts: "contacts"

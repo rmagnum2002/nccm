@@ -19,11 +19,11 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body onload="initialize()">
 <!--=== Top ===-->
 <!-- render login menu, language bar -->
 <div class="top">
-  <%#= render 'layouts/top' %>
+  <%= render 'layouts/top' %>
 </div><!--/top-->
 <!--=== End Top ===-->
 
