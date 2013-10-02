@@ -12,11 +12,11 @@ Index.initParallaxSlider();
 <div class="row-fluid purchase margin-bottom-30">
   <div class="container">
     <div class="span9">
-      <span>NCCM GRUP - compania cu cea mai mare experiență în forări subterane din Republica Moldova.</span>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat.</p>
+      <span>NCCM GRUP - <%= t('main_page.moto') %>.</span>
+<!--       <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat.</p> -->
     </div>
-    <%= link_to calculator_path, class: "btn-buy hover-effect" do %>
-      Lucrări finisate
+    <%= link_to completed_tasks_path, class: "btn-buy hover-effect" do %>
+      <%= t('main_page.completed_tasks') %>
     <% end %>
   </div>
 </div><!--/row-fluid-->
@@ -30,7 +30,7 @@ Index.initParallaxSlider();
       <div class="service clearfix">
         <i class="icon-check-sign"></i>
         <div class="desc">
-          <h4>Experiență</h4>
+          <h4><%= t('main_page.experience') %></h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
         </div>
       </div>
@@ -39,7 +39,7 @@ Index.initParallaxSlider();
       <div class="service clearfix">
         <i class="icon-check-sign"></i>
         <div class="desc">
-          <h4>Profesionalism</h4>
+          <h4><%= t('main_page.professionalism') %></h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
         </div>
       </div>
@@ -48,7 +48,7 @@ Index.initParallaxSlider();
       <div class="service clearfix">
         <i class="icon-check-sign"></i>
         <div class="desc">
-          <h4>Calitate</h4>
+          <h4><%= t('main_page.quality') %></h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
         </div>
       </div>
@@ -57,7 +57,7 @@ Index.initParallaxSlider();
   <!-- //End Service Blokcs -->
 
   <!-- Recent Works -->
-  <div class="headline"><h3>Lucrări finisate recent</h3></div>
+  <div class="headline"><h3><%= t('main_page.recent_tasks') %></h3></div>
   <ul class="thumbnails">
     <li class="span3">
       <div class="thumbnail-style thumbnail-kenburn">
