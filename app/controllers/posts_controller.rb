@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @about_page = true
-    @posts = Post.order('id desc')
+    @posts = Post.order('id desc').page(params[:page]).per(3)
   end
 
   def show
