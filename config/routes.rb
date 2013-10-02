@@ -14,6 +14,7 @@ Nccm::Application.routes.draw do
   get "optic_fibers" => "welcome#optic_fibers", as: :optic_fibers
   get "equipment" => "utilities#index", as: :equipment
   get "docs" => "welcome#docs", as: :docs
+  get "partners" => "clients#index", as: :partners
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -22,6 +23,8 @@ Nccm::Application.routes.draw do
 
   resources :posts
   resources :utilities
+  resources :clients
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
