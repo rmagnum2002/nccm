@@ -1,29 +1,106 @@
-<h1>Utilaje</h1>
-<% @utilities.each do |ut| %>
-  <div class="page-header">
-    <h3><%= ut.title %></h3>
-  </div>
-  <p><%= sanitize truncate(ut.description, omision: "...", length: 700), :tags => %w(h) %></p>
-  <div class="row">
-    <div class="col-sm-6 col-md-3">
-      <a href="#" class="thumbnail">
-        <img data-src="<%= asset_path 'slide1.jpg' %>" alt="100%x180" src="<%= asset_path 'slide1.jpg' %>" style="height: 180px; width: 100%; display: block;">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <a href="#" class="thumbnail">
-        <img data-src="<%= asset_path 'slide2.jpg' %>" alt="100%x180" src="<%= asset_path 'slide2.jpg' %>" style="height: 180px; width: 100%; display: block;">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <a href="#" class="thumbnail">
-        <img data-src="<%= asset_path 'slide3.jpg' %>" alt="100%x180" src="<%= asset_path 'slide3.jpg' %>" style="height: 180px; width: 100%; display: block;">
-      </a>
-    </div>
-    <div class="col-sm-6 col-md-3">
-      <a href="#" class="thumbnail">
-        <img data-src="<%= asset_path 'slide1.jpg' %>" alt="100%x180" src="<%= asset_path 'slide1.jpg' %>" style="height: 180px; width: 100%; display: block;">
-      </a>
-    </div>
-  </div>
+<% content_for :plugins do %>
+<link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
+<link rel="stylesheet" href="assets/css/effects.css">
 <% end %>
+<% content_for :scripts do %>
+<script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<% end %>
+<% content_for :script_init do %>
+App.initFancybox();
+<% end %>
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-20">
+  <div class="container">
+    <h1 class="color-green pull-left">Utilaje</h1>
+    <ul class="pull-right breadcrumb">
+      <li><a href="/">Home</a> <span class="divider">/</span></li>
+      <li class="active">Noutăți</li>
+    </ul>
+  </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container">
+  <div class="row-fluid blog-page">
+    <!-- Left Sidebar -->
+    <div class="span9">
+      <% @utilities.each do |ut| %>
+      <div class="blog margin-bottom-30">
+        <h3><%= ut.title %></h3>
+        <div class="blog-img"><img src="<%= asset_path 'slide1.jpg' %>" alt="" /></div>
+        <p><%= sanitize truncate(ut.description, omision: "...", length: 700), :tags => %w(h) %></p>
+        <ul class="thumbnails">
+            <li class="span3">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="<%= asset_path 'slide1.jpg' %>">
+                    <div class="overlay-zoom">
+                        <img src="<%= asset_path 'slide1.jpg' %>" alt="" />
+                        <div class="zoom-icon"></div>
+                    </div>
+                </a>
+            </li>
+            <li class="span3">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="<%= asset_path 'slide2.jpg' %>">
+                    <div class="overlay-zoom">
+                        <img src="<%= asset_path 'slide2.jpg' %>" alt="" />
+                        <div class="zoom-icon"></div>
+                    </div>
+                </a>
+            </li>
+            <li class="span3">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #3" href="<%= asset_path 'slide3.jpg' %>">
+                    <div class="overlay-zoom">
+                        <img src="<%= asset_path 'slide3.jpg' %>" alt="" />
+                        <div class="zoom-icon"></div>
+                    </div>
+                </a>
+            </li>
+            <li class="span3">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #4" href="<%= asset_path 'slide1.jpg' %>">
+                    <div class="overlay-zoom">
+                        <img src="<%= asset_path 'slide1.jpg' %>" alt="" />
+                        <div class="zoom-icon"></div>
+                    </div>
+                </a>
+            </li>
+        </ul><!--/thumbnails-->
+      </div><!--/blog-->
+      <hr>
+      <% end %>
+    </div><!--/span9-->
+
+    <!-- Right Sidebar -->
+    <div class="span3">
+      <!-- Our Services -->
+      <div class="who margin-bottom-30">
+        <div class="headline"><h3>Serviciile noastre</h3></div>
+        <p>At vero eos et accusamus et iusto odio dign issimos ducimus qui blanditiis iusto.</p>
+        <ul class="unstyled">
+          <li><a href="#"><i class="icon-chevron-sign-right"></i>Vivamus imperdiet condimentum</a></li>
+          <li><a href="#"><i class="icon-chevron-sign-right"></i>Anim pariatur cliche squid</a></li>
+          <li><a href="#"><i class="icon-chevron-sign-right"></i>Eget placerat felis consectetur</a></li>
+          <li><a href="#"><i class="icon-chevron-sign-right"></i>Condimentum diam eget placerat</a></li>
+        </ul>
+      </div>
+
+      <!-- About Us -->
+<!--       <div class="headline"><h3>About Us</h3></div>
+  <p class="margin-bottom-30">At vero eos et acc usamus et iusto odio dign issimos ducimus atque corrupti quos dolores etrerum facilis est etenim a feugiat cupiditate non quos. <a class="read-more" href="#">Read more</a></p> -->
+
+  <!-- Contact Us -->
+  <div class="who margin-bottom-30">
+    <div class="headline"><h3>Contacte</h3></div>
+    <p>Vero facilis est etenim a feugiat cupiditate non quos etrerum facilis.</p>
+    <ul class="unstyled">
+      <li><a href="#"><i class="icon-home"></i>Moldova, Ialoveni, strada Iurie Gagarin 1</a></li>
+      <li><a href="#"><i class="icon-envelope-alt"></i><%= mail_to "nccmgrup@gmail.com" %></a></li>
+      <li><a href="#"><i class="icon-phone-sign"></i>(373) 22 73-78-42</a></li>
+      <li><a href="http://www.nccm.md"><i class="icon-globe"></i>http://www.nccm.md</a></li>
+    </ul>
+  </div>
+</div><!--/span3-->
+</div><!--/row-fluid-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
