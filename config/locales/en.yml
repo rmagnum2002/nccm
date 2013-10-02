@@ -34,3 +34,14 @@ en:
     complete_tasks: "Completed tasks"
     optics: "optic fibers"
     contacts: "contacts"
+  main_page:
+    moto: "company with the largest experience in underground drilling in Moldova"
+    completed_tasks: "Completed tasks"
+    experience: "Experience"
+    professionalism: "Professionalism"
+    quality: "Quality"
+    recent_tasks: "Recently completed tasks"
+    our_clients: "Our clients"
+  right_side:
+    our_services: "Our services"
+    contacts: "Contacts"
