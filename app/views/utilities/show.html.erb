@@ -1,0 +1,86 @@
+<% content_for :plugins do %>
+<link rel="stylesheet" href="/assets/plugins/fancybox/source/jquery.fancybox.css">
+<link rel="stylesheet" href="/assets/css/effects.css">
+<% end %>
+<% content_for :scripts do %>
+<script type="text/javascript" src="/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+<% end %>
+<% content_for :script_init do %>
+App.initFancybox();
+<% end %>
+
+<div class="row-fluid breadcrumbs margin-bottom-20">
+  <div class="container">
+    <h1 class="pull-left"><%= @utility.title %></h1>
+    <ul class="pull-right breadcrumb">
+      <li><a href="/">Home</a> <span class="divider">/</span></li>
+      <li><a href="/utilities">Utilities</a> <span class="divider">/</span></li>
+      <li class="active"><%= @utility.title %></li>
+    </ul>
+  </div><!--/container-->
+</div>
+<!--=== Content Part ===-->
+<div class="container">
+  <div class="row-fluid blog-page blog-item">
+    <!-- Left Sidebar -->
+    <div class="span9">
+      <div class="blog margin-bottom-30">
+        <div class="blog-img"><center><img src="<%= asset_path 'slide1.jpg' %>" alt="" /></center></div>
+        <p><%= raw(@utility.description) %></p>
+        <ul class="thumbnails">
+          <li class="span3">
+            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="<%= asset_path 'slide1.jpg' %>">
+              <div class="overlay-zoom">
+                <img src="<%= asset_path 'slide1.jpg' %>" alt="" />
+                <div class="zoom-icon"></div>
+              </div>
+            </a>
+          </li>
+          <li class="span3">
+            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="<%= asset_path 'slide2.jpg' %>">
+              <div class="overlay-zoom">
+                <img src="<%= asset_path 'slide2.jpg' %>" alt="" />
+                <div class="zoom-icon"></div>
+              </div>
+            </a>
+          </li>
+          <li class="span3">
+            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #3" href="<%= asset_path 'slide3.jpg' %>">
+              <div class="overlay-zoom">
+                <img src="<%= asset_path 'slide3.jpg' %>" alt="" />
+                <div class="zoom-icon"></div>
+              </div>
+            </a>
+          </li>
+          <li class="span3">
+            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #4" href="<%= asset_path 'slide1.jpg' %>">
+              <div class="overlay-zoom">
+                <img src="<%= asset_path 'slide1.jpg' %>" alt="" />
+                <div class="zoom-icon"></div>
+              </div>
+            </a>
+          </li>
+        </ul><!--/thumbnails-->
+      </div><!--/blog-->
+
+      <hr />
+    </div><!--/span9-->
+
+    <!-- Right Sidebar -->
+    <div class="span3">
+      <!-- Photo Stream -->
+      <div class="headline"><h3>Photo Stream</h3></div>
+      <ul class="unstyled blog-ads">
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/5.jpg" alt="" class="hover-effect" /></a></li>
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/6.jpg" alt="" class="hover-effect" /></a></li>
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/8.jpg" alt="" class="hover-effect" /></a></li>
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/10.jpg" alt="" class="hover-effect" /></a></li>
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/11.jpg" alt="" class="hover-effect" /></a></li>
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/1.jpg" alt="" class="hover-effect" /></a></li>
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/2.jpg" alt="" class="hover-effect" /></a></li>
+        <li><a href="#"><img src="/assets/img/sliders/elastislide/7.jpg" alt="" class="hover-effect" /></a></li>
+      </ul>
+    </div><!--/span3-->
+  </div><!--/row-fluid-->
+</div><!--/container-->
+<!--=== End Content Part ===-->

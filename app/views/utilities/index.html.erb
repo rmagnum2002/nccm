@@ -1,22 +1,20 @@
 <% content_for :plugins do %>
-<link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
-<link rel="stylesheet" href="assets/css/effects.css">
+<link rel="stylesheet" href="/assets/plugins/fancybox/source/jquery.fancybox.css">
+<link rel="stylesheet" href="/assets/css/effects.css">
 <% end %>
 <% content_for :scripts do %>
-<script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
 <% end %>
 <% content_for :script_init do %>
 App.initFancybox();
 <% end %>
-
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-20">
   <div class="container">
     <h1 class="color-green pull-left">Utilaje</h1>
     <ul class="pull-right breadcrumb">
       <li><a href="/">Home</a> <span class="divider">/</span></li>
-      <li class="active">Noutăți</li>
+      <li class="active">Utilaje</li>
     </ul>
   </div><!--/container-->
 </div><!--/breadcrumbs-->
@@ -27,48 +25,22 @@ App.initFancybox();
   <div class="row-fluid blog-page">
     <!-- Left Sidebar -->
     <div class="span9">
-      <% @utilities.each do |ut| %>
-      <div class="blog margin-bottom-30">
-        <h3><%= ut.title %></h3>
-        <div class="blog-img"><img src="<%= asset_path 'slide1.jpg' %>" alt="" /></div>
-        <p><%= sanitize truncate(ut.description, omision: "...", length: 700), :tags => %w(h) %></p>
-        <ul class="thumbnails">
-          <li class="span3">
-            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="<%= asset_path 'slide1.jpg' %>">
+      <ul class="thumbnails">
+        <% @utilities.each do |ut| %>
+        <li class="span3">
+          <div class="thumbnail-style">
+            <a  class="fancybox-button zoomer" data-rel="fancybox-button" title="<%= ut.title + ' - ' + ut.description %>" href="<%= ut.avatar.url %>">
               <div class="overlay-zoom">
-                <img src="<%= asset_path 'slide1.jpg' %>" alt="" />
+                <%= image_tag ut.avatar.url(:thumb) %>
                 <div class="zoom-icon"></div>
               </div>
             </a>
-          </li>
-          <li class="span3">
-            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="<%= asset_path 'slide2.jpg' %>">
-              <div class="overlay-zoom">
-                <img src="<%= asset_path 'slide2.jpg' %>" alt="" />
-                <div class="zoom-icon"></div>
-              </div>
-            </a>
-          </li>
-          <li class="span3">
-            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #3" href="<%= asset_path 'slide3.jpg' %>">
-              <div class="overlay-zoom">
-                <img src="<%= asset_path 'slide3.jpg' %>" alt="" />
-                <div class="zoom-icon"></div>
-              </div>
-            </a>
-          </li>
-          <li class="span3">
-            <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #4" href="<%= asset_path 'slide1.jpg' %>">
-              <div class="overlay-zoom">
-                <img src="<%= asset_path 'slide1.jpg' %>" alt="" />
-                <div class="zoom-icon"></div>
-              </div>
-            </a>
-          </li>
-        </ul><!--/thumbnails-->
-      </div><!--/blog-->
-      <hr>
-      <% end %>
+            <h4><%= ut.title %></h4>
+            <p><%= ut.description %> <!-- <a class="read-more" href="#">Read more</a></p> -->
+          </div>
+        </li>
+        <% end %>
+      </ul><!--/thumbnails-->
     </div><!--/span9-->
 
     <!-- Right Sidebar -->

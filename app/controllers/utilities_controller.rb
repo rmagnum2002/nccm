@@ -3,4 +3,8 @@ class UtilitiesController < ApplicationController
     @about_page = true
     @utilities = Utility.all
   end
+
+  def show
+    @utility = Utility.find(params[:id])
+  end
 end

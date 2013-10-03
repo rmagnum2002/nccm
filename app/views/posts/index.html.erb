@@ -36,7 +36,9 @@
         </ul>
         <div class="blog-img"><img src="assets/img/posts/3.jpg" alt="" /></div>
         <p><%= post.content %></p>
-        <p><a class="btn-u btn-u-small" href="blog_item.html">Deschide</a></p>
+        <p>
+          <%= link_to "Deschide", post_path(post), class: "btn-u btn-u-small" %>
+        </p>
       </div><!--/blog-->
       <% end %>
 
