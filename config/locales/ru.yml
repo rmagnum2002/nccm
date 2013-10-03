@@ -24,6 +24,8 @@ ru:
   right_side:
     our_services: "Наши услуги"
     contacts: "Контакты"
+  utilities:
+    utilities: "Техника"
   date:
     abbr_day_names:
     - Вс

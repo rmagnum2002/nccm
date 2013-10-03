@@ -24,6 +24,8 @@ ro:
   right_side:
     our_services: "Serviciile noastre"
     contacts: "Contacte"
+  utilities:
+    utilities: "Utilaje"
   date:
     abbr_day_names:
     - Dum

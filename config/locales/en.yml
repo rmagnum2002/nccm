@@ -45,3 +45,5 @@ en:
   right_side:
     our_services: "Our services"
     contacts: "Contacts"
+  utilities:
+    utilities: "Utilities"
