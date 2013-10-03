@@ -1,7 +1,9 @@
 <div class="clients-page margin-bottom-20">
   <a class="img-hover" href="#">
-    <img src="assets/img/clients/orange_grey.jpg" alt="" />
-    <img src="assets/img/clients/orange.jpg" class="img-colorful" alt="" />
+    <%= image_tag client.avatar.url(:thumb) %>
+    <%= image_tag client.avatar.url(:thumb), class: "img-colorful" %>
+<!--     <img src="assets/img/clients/orange_grey.jpg" alt="" />
+    <img src="assets/img/clients/orange.jpg" class="img-colorful" alt="" /> -->
   </a>
   <p>
     <h4><%= client.name %></h4>

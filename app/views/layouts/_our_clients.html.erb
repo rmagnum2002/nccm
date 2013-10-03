@@ -4,8 +4,16 @@
     <% Client.all.each do |client| %>
       <li>
         <a href="<%= client.url %>">
-          <img src="assets/img/clients/orange_grey.jpg" alt="" />
-          <img src="assets/img/clients/orange.jpg" class="color-img" alt="" />
+          <%= image_tag client.avatar.url(:thumb) %>
+          <%= image_tag client.avatar.url(:thumb), class: "color-img" %>
+        </a>
+      </li>
+    <% end %>
+    <% Client.all.each do |client| %>
+      <li>
+        <a href="<%= client.url %>">
+          <%= image_tag client.avatar.url(:thumb) %>
+          <%= image_tag client.avatar.url(:thumb), class: "color-img" %>
         </a>
       </li>
     <% end %>
