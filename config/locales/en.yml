@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  home: "Home"
   menu:
     languages: "languages"
     company: "company"
@@ -48,3 +49,33 @@ en:
     contacts: "Contacts"
   utilities:
     utilities: "Utilities"
+  footer:
+    about: "About"
+    contact_us: "Contact Us"
+    street: "Iurie Gagarin street, 1"
+    country: "Moldova, Ialoveni"
+    phone: "Phone:"
+    fax: "Fax:"
+  copyright:
+    rights: "2013 &copy; NCCM GRUP. All rights reserved."
+  gallery:
+    gallery: "Photo Gallery"
+  contacts:
+    contacts: "Contacts"
+    leave_message: "Leave us a message"
+    address: "Moldova, Ialoveni, Iurie Gagarin street, 1"
+    hours: "Work hours"
+    days_one: "Monday-Friday"
+    days_two: "Saturday"
+    days_three: "Sunday"
+    closed: "Closed"
+  calculator_page:
+    calculator: "Calculator"
+    iron_pipe: "Iron Pipe"
+    plastic_pipe: "Polyethylene Pipe"
+    warning: "Warning"
+    warning_message: "Prices are shown for informational purposes only and may vary depending on the activity and the distance of the object."
+    diameter: "Diameter"
+    length: "Length"
+    price: "Price"
+    total: "Total"

@@ -1,4 +1,5 @@
 ro:
+  home: "Acasă"
   menu:
     languages: "limbă"
     company: "companie"
@@ -27,6 +28,36 @@ ro:
     contacts: "Contacte"
   utilities:
     utilities: "Utilaje"
+  footer:
+    about: "Despre noi"
+    contact_us: "Contacte"
+    street: "strada Iurie Gagarin 1"
+    country: "Moldova, Ialoveni"
+    phone: "Telefon:"
+    fax: "Fax:"
+  copyright:
+    rights: "2013 &copy; NCCM GRUP. Toate drepturile rezervate."
+  gallery:
+    gallery: "Galerie Foto"
+  contacts:
+    contacts: "Contacte"
+    leave_message: "Lăsați-ne un mesaj"
+    address: "Moldova, Ialoveni, strada Iurie Gagarin 1"
+    hours: "Orele de lucru"
+    days_one: "Luni-Vineri"
+    days_two: "Sâmbătă"
+    days_three: "Duminică"
+    closed: "Închis"
+  calculator_page:
+    calculator: "Calculator"
+    iron_pipe: "Țeavă de metal"
+    plastic_pipe: "Țeavă de polietilenă"
+    warning: "Atenție"
+    warning_message: "Prețurile sunt arătate doar în scopuri informative și poate varia în funcție de domeniul de activitate și de distanța obiectului."
+    diameter: "Diametru"
+    length: "Lungime"
+    price: "Preț"
+    total: "Total"
   date:
     abbr_day_names:
     - Dum

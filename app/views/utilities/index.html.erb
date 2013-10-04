@@ -13,7 +13,7 @@ App.initFancybox();
   <div class="container">
     <h1 class="color-green pull-left"><%= t('utilities.utilities') %></h1>
     <ul class="pull-right breadcrumb">
-      <li><a href="/">Home</a> <span class="divider">/</span></li>
+      <li><%= link_to t(:home), root_path %> <span class="divider">/</span></li>
       <li class="active"><%= t('utilities.utilities') %></li>
     </ul>
   </div><!--/container-->

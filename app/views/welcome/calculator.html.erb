@@ -1,34 +1,36 @@
 <div class="row-fluid breadcrumbs margin-bottom-20">
   <div class="container">
-        <h1 class="pull-left">Calculator</h1>
-        <ul class="pull-right breadcrumb">
-            <li><a href="/">Home</a> <span class="divider">/</span></li>
-            <li class="active">Calculator</li>
-        </ul>
-    </div><!--/container-->
+    <h1 class="pull-left"><%= t('calculator_page.calculator') %></h1>
+    <ul class="pull-right breadcrumb">
+      <li><%= link_to t(:home), root_path %> <span class="divider">/</span></li>
+      <li class="active"><%= t('calculator_page.calculator') %></li>
+    </ul>
+  </div><!--/container-->
 </div>
 
 <div class="container">
-  <div class="calc_tabs_header">
-    <h5>
-      <span class="link_to_metalic">Țeavă Metal</span> |
-      <span class="link_to_plastic"><%= link_to 'Țeavă Polietilenă', plastic_calc_path, remote: true %></span>
-    </h5>
-  </div>
-
-  <div class="calc_container">
-    <%= render 'welcome/calculator/calc_metalic' %>
-  </div>
-  <br><br><br>
-  <div class="panel panel-warning">
-    <div class="panel-heading">
-      <h3 class="panel-title">Atenție!</h3>
+  <div class="span12">
+    <div class="calc_tabs_header">
+      <h5>
+        <span class="link_to_metalic"><%= t('calculator_page.iron_pipe') %></span> |
+        <span class="link_to_plastic"><%= link_to t('calculator_page.plastic_pipe'), plastic_calc_path, remote: true %></span>
+      </h5>
     </div>
-    <div class="panel-body">
-      Prețurile sunt arătate doar în scopuri informative și poate varia în funcție de domeniul de activitate și de distanța obiectului.
+
+    <div class="calc_container">
+      <%= render 'welcome/calculator/calc_metalic' %>
+    </div>
+    <br><br><br>
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t('calculator_page.warning') %>!</h3>
+      </div>
+      <div class="panel-body">
+        <%= t('calculator_page.warning_message') %>
+      </div>
     </div>
   </div>
   <!-- Our Clients -->
-  <%= render 'layouts/our_clients' %>
+  <%#= render 'layouts/our_clients' %>
   <!-- //End Our Clients -->
 </div>

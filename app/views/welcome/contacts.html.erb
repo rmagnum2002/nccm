@@ -9,10 +9,10 @@ Contact.initMap();
 
 <div class="row-fluid breadcrumbs margin-bottom-20">
   <div class="container">
-    <h1 class="pull-left">Contacte</h1>
+    <h1 class="pull-left"><%= t('contacts.contacts') %></h1>
     <ul class="pull-right breadcrumb">
-      <li><a href="/">Home</a> <span class="divider">/</span></li>
-      <li class="active">Contacte</li>
+      <li><%= link_to t(:home), root_path %> <span class="divider">/</span></li>
+      <li class="active"><%= t('contacts.contacts') %></li>
     </ul>
   </div><!--/container-->
 </div>
@@ -25,8 +25,9 @@ Contact.initMap();
   <!--=== Content Part ===-->
   <div class="row-fluid">
     <div class="span9">
-      <div class="headline"><h3>Lăsați un mesaj</h3></div>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p><br />
+      <div class="headline"><h3><%= t('contacts.leave_message') %></h3></div>
+<!--       <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p> -->
+      <br />
       <form>
         <label>Nume</label>
         <input type="text" class="span7 border-radius-none" />
@@ -40,20 +41,20 @@ Contact.initMap();
 
     <div class="span3">
       <!-- Contacts -->
-      <div class="headline"><h3>Contacte</h3></div>
+      <div class="headline"><h3><%= t('contacts.contacts') %></h3></div>
       <ul class="unstyled who margin-bottom-20">
-        <li><a href="#"><i class="icon-home"></i>Moldova, Ialoveni, strada Iurie Gagarin 1</a></li>
+        <li><a href="#"><i class="icon-home"></i><%= t('contacts.address') %></a></li>
         <li><a href="#"><i class="icon-envelope-alt"></i><%= mail_to "nccmgrup@gmail.com" %></a></li>
         <li><a href="#"><i class="icon-phone-sign"></i>(373) 22 73-78-42</a></li>
         <li><a href="http://www.nccm.md"><i class="icon-globe"></i>http://www.nccm.md</a></li>
       </ul>
 
       <!-- Business Hours -->
-      <div class="headline"><h3>Orele de lucru</h3></div>
+      <div class="headline"><h3><%= t('contacts.hours') %></h3></div>
       <ul class="unstyled">
-        <li><strong>Luni-Vineri:</strong> 8.00 - 18.00</li>
-        <li><strong>Sâmbăta:</strong> 8.00 - 14.00</li>
-        <li><strong>Duminica:</strong>  Închis</li>
+        <li><strong><%= t('contacts.days_one') %>:</strong> 8.00-18.00</li>
+        <li><strong><%= t('contacts.days_two') %>:</strong> 8.00-14.00</li>
+        <li><strong><%= t('contacts.days_three') %>:</strong> <%= t('contacts.hours.closed') %></li>
       </ul>
 
       <!-- Why we are? -->
@@ -68,7 +69,7 @@ Contact.initMap();
   </div><!--/row-fluid-->
 
   <!-- Our Clients -->
-  <%= render 'layouts/our_clients' %>
+  <%#= render 'layouts/our_clients' %>
   <!-- //End Our Clients -->
   <!--=== End Content Part ===-->
 </div>
