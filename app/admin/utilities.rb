@@ -2,6 +2,21 @@ ActiveAdmin.register Utility do
   controller do
     before_action :set_utility, only: [:show, :edit, :update, :destroy]
 
+    def create
+      @utility = Utility.new(utility_params)
+
+      respond_to do |format|
+        if @utility.save
+          format.html { redirect_to admin_utility_path(@utility), notice: 'Utility was successfully created.' }
+          format.json { render json: @utility, status: :created, location: @utility }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @utility.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+
+
     def update
       respond_to do |format|
         if @utility.update(utility_params)
