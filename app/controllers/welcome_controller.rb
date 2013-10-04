@@ -46,4 +46,7 @@ class WelcomeController < ApplicationController
   def docs
     @docs_page = true
   end
+
+  def gallery
+  end
 end

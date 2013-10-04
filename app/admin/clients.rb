@@ -2,6 +2,20 @@ ActiveAdmin.register Client do
   controller do
     before_action :set_client, only: [:show, :edit, :update, :destroy]
 
+    def create
+      @client = Client.new(client_params)
+
+      respond_to do |format|
+        if @client.save
+          format.html { redirect_to admin_client_path(@client), notice: 'Client was successfully created.' }
+          format.json { render json: @client, status: :created, location: @client }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @client.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+
     def update
       respond_to do |format|
         if @client.update(client_params)
