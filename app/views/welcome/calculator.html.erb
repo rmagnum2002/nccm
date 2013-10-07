@@ -9,7 +9,6 @@
 </div>
 
 <div class="container">
-  <div class="span12">
     <div class="calc_tabs_header">
       <h5>
         <span class="link_to_metalic"><%= t('calculator_page.iron_pipe') %></span> |
@@ -20,17 +19,16 @@
     <div class="calc_container">
       <%= render 'welcome/calculator/calc_metalic' %>
     </div>
-    <br><br><br>
     <div class="panel panel-warning">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= t('calculator_page.warning') %>!</h3>
+        <h3 class="panel-title text-error"><%= t('calculator_page.warning') %>!</h3>
       </div>
       <div class="panel-body">
         <%= t('calculator_page.warning_message') %>
       </div>
-    </div>
+      <br><br><br>
   </div>
   <!-- Our Clients -->
-  <%#= render 'layouts/our_clients' %>
+  <%= render '/layouts/our_clients' %>
   <!-- //End Our Clients -->
 </div>

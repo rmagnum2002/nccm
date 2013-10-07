@@ -4,7 +4,7 @@
     <% Client.all.each do |client| %>
       <li>
         <a href="<%= client.url %>">
-          <%= image_tag client.avatar.url(:thumb) %>
+          <%= image_tag client.avatar.url(:grayscale) %>
           <%= image_tag client.avatar.url(:thumb), class: "color-img" %>
         </a>
       </li>
@@ -12,7 +12,7 @@
     <% Client.all.each do |client| %>
       <li>
         <a href="<%= client.url %>">
-          <%= image_tag client.avatar.url(:thumb) %>
+          <%= image_tag client.avatar.url(:grayscale) %>
           <%= image_tag client.avatar.url(:thumb), class: "color-img" %>
         </a>
       </li>
