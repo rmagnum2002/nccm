@@ -1,4 +1,5 @@
 Nccm::Application.routes.draw do
+  get "messages/create"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get "news" => "posts#index", as: :news
@@ -27,6 +28,7 @@ Nccm::Application.routes.draw do
   resources :posts
   resources :utilities
   resources :clients
+  resources :messages
 
 
   # Example of regular route:

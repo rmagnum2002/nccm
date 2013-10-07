@@ -28,15 +28,15 @@ Contact.initMap();
       <div class="headline"><h3><%= t('contacts.leave_message') %></h3></div>
 <!--       <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p> -->
       <br />
-      <form>
-        <label>Nume</label>
-        <input type="text" class="span7 border-radius-none" />
+      <%= form_for Message.new do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "span7 border-radius-none" %>
         <label>Email <span class="color-red">*</span></label>
-        <input type="text" class="span7 border-radius-none" />
-        <label>Mesaj</label>
-        <textarea rows="8" class="span10"></textarea>
-        <p><button type="submit" class="btn-u">Trimite mesaj</button></p>
-      </form>
+        <%= f.email_field :email, class: "span7 border-radius-none" %>
+        <%= f.label :message %>
+        <%= f.text_area :message, class: "span7 border-radius-none", rows: 8 %>
+        <p><%= f.submit "send messge", class: "btn-u" %></p>
+      <% end %>
     </div><!--/span9-->
 
     <div class="span3">
@@ -54,7 +54,7 @@ Contact.initMap();
       <ul class="unstyled">
         <li><strong><%= t('contacts.days_one') %>:</strong> 8.00-18.00</li>
         <li><strong><%= t('contacts.days_two') %>:</strong> 8.00-14.00</li>
-        <li><strong><%= t('contacts.days_three') %>:</strong> <%= t('contacts.hours.closed') %></li>
+        <li><strong><%= t('contacts.days_three') %>:</strong> <%= t('contacts.closed') %></li>
       </ul>
 
       <!-- Why we are? -->
