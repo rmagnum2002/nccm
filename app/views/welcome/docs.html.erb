@@ -1,3 +1,52 @@
 <% content_for :plugins do %>
-<link rel="stylesheet" href="assets/css/img-hover-effect.css">
+<link rel="stylesheet" href="/assets/plugins/fancybox/source/jquery.fancybox.css">
+<link rel="stylesheet" href="/assets/css/effects.css">
 <% end %>
+<% content_for :scripts do %>
+<script type="text/javascript" src="/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+<% end %>
+<% content_for :script_init do %>
+App.initFancybox();
+<% end %>
+<div class="breadcrumbs margin-bottom-50">
+  <div class="container">
+        <h1 class="color-green pull-left"><%= t('docs_page.docs') %></h1>
+        <ul class="pull-right breadcrumb">
+            <li><%= link_to t(:home), root_path %><span class="divider">/</span></li>
+            <li class="active"><%= t('docs_page.docs') %></li>
+        </ul>
+    </div><!--/container-->
+</div>
+<div class="container">
+  <div class="row-fluid gallery">
+    <% if @docs.any? %>
+    <ul class="thumbnails">
+      <% @docs.each do |doc| %>
+      <li class="span3">
+        <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="http://www.skt-spb.ru/upload/resize_cache/iblock/2ad/800_600_0/2ad331cbd065495f7c9a783e9720f754.jpg">
+          <div class="overlay-zoom">
+            <img src="http://www.skt-spb.ru/upload/resize_cache/iblock/2ad/800_600_0/2ad331cbd065495f7c9a783e9720f754.jpg" alt="">
+            <div class="zoom-icon"></div>
+          </div>
+        </a>
+      </li>
+      <% end %>
+    </ul><!--/thumbnails-->
+    <% else %>
+      <%= render '/welcome/under_construction' %>
+    <% end %>
+
+    <!--
+    <div class="pagination pagination-right">
+    <ul>
+    <li><a href="#">Prev</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li class="active"><a>3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Next</a></li>
+    </ul>
+    </div> -->
+  </div><!--/row-fluid-->
+</div>

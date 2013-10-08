@@ -79,3 +79,5 @@ en:
     length: "Length"
     price: "Price"
     total: "Total"
+  docs_page:
+    docs: "Documents"

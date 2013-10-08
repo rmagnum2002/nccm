@@ -58,6 +58,8 @@ ro:
     length: "Lungime"
     price: "Preț"
     total: "Total"
+  docs_page:
+    docs: "Documente"
   date:
     abbr_day_names:
     - Dum

@@ -58,6 +58,8 @@ ru:
     length: "Длина"
     price: "Цена"
     total: "Всего"
+  docs_page:
+    docs: "Документы"
   date:
     abbr_day_names:
     - Вс

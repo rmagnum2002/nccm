@@ -29,6 +29,7 @@ Nccm::Application.routes.draw do
   resources :utilities
   resources :clients
   resources :messages
+  resources :documents
 
 
   # Example of regular route:
