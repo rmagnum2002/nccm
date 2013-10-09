@@ -60,6 +60,8 @@ ru:
     total: "Всего"
   docs_page:
     docs: "Документы"
+  team_page:
+    team: "Команда"
   date:
     abbr_day_names:
     - Вс

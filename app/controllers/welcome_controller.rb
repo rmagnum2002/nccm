@@ -19,10 +19,6 @@ class WelcomeController < ApplicationController
     @posts = Post.order('id desc').limit(3)
   end
 
-  def team
-    @about_page = true
-  end
-
   def contacts
     @contact_page = true
   end

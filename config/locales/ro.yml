@@ -60,6 +60,8 @@ ro:
     total: "Total"
   docs_page:
     docs: "Documente"
+  team_page:
+    team: "Echipă"
   date:
     abbr_day_names:
     - Dum

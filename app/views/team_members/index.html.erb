@@ -1,0 +1,28 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs margin-bottom-20">
+  <div class="container">
+        <h1 class="color-green pull-left"><%= t('team_page.team') %></h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/"><%= t(:home) %></a> <span class="divider">/</span></li>
+            <li class="active"><%= t('team_page.team') %></li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<!--=== Content Part ===-->
+<div class="container">
+  <div class="row-fluid">
+    <div class="span9">
+      <% if @team_members.any? %>
+        <%= render @team_members %>
+      <% else %>
+        <%= render '/welcome/under_construction' %>
+      <% end %>
+    </div><!--/span9-->
+
+  <div class="span3">
+    <%= render 'layouts/right_side' %>
+  </div><!--/span3-->
+</div><!--/row-fluid-->
+</div><!--/container-->
+<!--=== End Content Part ===-->

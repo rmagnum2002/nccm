@@ -1,4 +1,6 @@
 Nccm::Application.routes.draw do
+  resources :team_members
+
   get "messages/create"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
