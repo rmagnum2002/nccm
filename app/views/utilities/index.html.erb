@@ -29,9 +29,9 @@ App.initFancybox();
         <% @utilities.each do |ut| %>
         <li class="span3">
           <div class="thumbnail-style">
-            <a  class="fancybox-button zoomer" data-rel="fancybox-button" title="<%= ut.title + ' - ' + ut.description %>" href="<%= ut.avatar.url %>">
+            <a  class="fancybox-button zoomer" data-rel="fancybox-button" title="<%= ut.title + ' - ' + ut.description %>" href="<%= ut.utility_image.url %>">
               <div class="overlay-zoom">
-                <%= image_tag ut.avatar.url(:thumb) %>
+                <%= image_tag ut.utility_image.url(:thumb) %>
                 <div class="zoom-icon"></div>
               </div>
             </a>

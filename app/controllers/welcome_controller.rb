@@ -45,5 +45,6 @@ class WelcomeController < ApplicationController
   end
 
   def gallery
+    @gallery = Gallery.first
   end
 end

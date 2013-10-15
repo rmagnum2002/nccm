@@ -59,7 +59,7 @@ ActiveAdmin.register TeamMember do
       f.input :phone
       f.input :mobile
       f.input :email
-      f.input :avatar, :as => :file
+      f.input :team_avatar, :as => :file
     end
     f.actions
    end

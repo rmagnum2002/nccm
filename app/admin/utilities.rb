@@ -43,7 +43,7 @@ ActiveAdmin.register Utility do
     f.inputs "Details" do
       f.input :title
       f.input :description
-      f.input :avatar, :as => :file
+      f.input :utility_image, :as => :file
     end
     f.actions
    end

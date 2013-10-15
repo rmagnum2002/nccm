@@ -64,10 +64,10 @@ ActiveRecord::Schema.define(version: 20131009132415) do
     t.string   "title_ru"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.string   "doc_image_file_name"
+    t.string   "doc_image_content_type"
+    t.integer  "doc_image_file_size"
+    t.datetime "doc_image_updated_at"
   end
 
   create_table "galleries", force: true do |t|
@@ -111,10 +111,10 @@ ActiveRecord::Schema.define(version: 20131009132415) do
     t.string   "mobile"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.string   "team_avatar_file_name"
+    t.string   "team_avatar_content_type"
+    t.integer  "team_avatar_file_size"
+    t.datetime "team_avatar_updated_at"
   end
 
   create_table "utilities", force: true do |t|
@@ -122,10 +122,10 @@ ActiveRecord::Schema.define(version: 20131009132415) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.string   "utility_image_file_name"
+    t.string   "utility_image_content_type"
+    t.integer  "utility_image_file_size"
+    t.datetime "utility_image_updated_at"
   end
 
 end
