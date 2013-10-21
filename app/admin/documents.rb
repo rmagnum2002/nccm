@@ -18,7 +18,7 @@ ActiveAdmin.register Document do
 
     def update
       respond_to do |format|
-        if @document.update(client_params)
+        if @document.update(doc_params)
           format.html { redirect_to admin_document_path(@document), notice: 'Document was successfully updated.' }
           format.json { head :no_content }
         else
@@ -63,7 +63,7 @@ ActiveAdmin.register Document do
       f.input :title
       f.input :title_ro
       f.input :title_ru
-      f.input :image, :as => :file
+      f.input :doc_image, :as => :file
     end
     f.actions
    end

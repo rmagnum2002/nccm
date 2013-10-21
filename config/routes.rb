@@ -1,4 +1,5 @@
 Nccm::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :team_members
 
   get "messages/create"

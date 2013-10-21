@@ -23,9 +23,10 @@ App.initFancybox();
     <ul class="thumbnails">
       <% @docs.each do |doc| %>
       <li class="span3">
-        <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="http://www.skt-spb.ru/upload/resize_cache/iblock/2ad/800_600_0/2ad331cbd065495f7c9a783e9720f754.jpg">
+        <h5><%= doc.title_for(current_language) %></h5>
+        <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="<%= doc.title_for(current_language) %>" href="<%= doc.doc_image.url %>">
           <div class="overlay-zoom">
-            <img src="http://www.skt-spb.ru/upload/resize_cache/iblock/2ad/800_600_0/2ad331cbd065495f7c9a783e9720f754.jpg" alt="">
+            <img src="<%= doc.doc_image.url %>" alt="">
             <div class="zoom-icon"></div>
           </div>
         </a>

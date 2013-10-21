@@ -25,6 +25,7 @@ App.initFancybox();
   <div class="row-fluid blog-page">
     <!-- Left Sidebar -->
     <div class="span9">
+    <% if @utilities.any? %>
       <ul class="thumbnails">
         <% @utilities.each do |ut| %>
         <li class="span3">
@@ -41,6 +42,9 @@ App.initFancybox();
         </li>
         <% end %>
       </ul><!--/thumbnails-->
+    <% else %>
+      <%= render '/welcome/under_construction' %>
+    <% end %>
     </div><!--/span9-->
 
     <!-- Right Sidebar -->

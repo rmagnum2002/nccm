@@ -30,11 +30,11 @@ Contact.initMap();
       <br />
       <%= form_for Message.new do |f| %>
         <%= f.label :name %>
-        <%= f.text_field :name, class: "span7 border-radius-none" %>
+        <%= f.text_field :name, class: "span7 border-radius-none", required: true %>
         <label>Email <span class="color-red">*</span></label>
-        <%= f.email_field :email, class: "span7 border-radius-none" %>
+        <%= f.email_field :email, class: "span7 border-radius-none", required: true %>
         <%= f.label :message %>
-        <%= f.text_area :message, class: "span7 border-radius-none", rows: 8 %>
+        <%= f.text_area :message, class: "span7 border-radius-none", rows: 8, required: true %>
         <p><%= f.submit "send messge", class: "btn-u" %></p>
       <% end %>
     </div><!--/span9-->

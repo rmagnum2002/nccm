@@ -34,9 +34,11 @@ class WelcomeController < ApplicationController
   end
 
   def technology
+    @page = OpticFiber.where(page_key: "technology_page").first
   end
 
   def optic_fibers
+    @page = OpticFiber.where(page_key: 'optic_fiber_page').first
   end
 
   def docs

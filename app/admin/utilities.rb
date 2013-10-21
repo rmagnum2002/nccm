@@ -1,4 +1,18 @@
 ActiveAdmin.register Utility do
+  index do
+    selectable_column
+    column "ID", :sortable => :id do |utility|
+      utility.id
+    end
+    column "title", :sortable => :title do |utility|
+      utility.title
+    end
+    column "Created at", :sortable => :created_at do |utility|
+      l utility.created_at, :format => :long
+    end
+    default_actions
+  end
+
   controller do
     before_action :set_utility, only: [:show, :edit, :update, :destroy]
 

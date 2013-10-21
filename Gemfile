@@ -33,6 +33,7 @@ gem 'bootstrap-sass-rails'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'kaminari'
 gem "paperclip", "~> 3.0"
+gem "ckeditor"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
