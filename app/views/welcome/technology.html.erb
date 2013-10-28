@@ -16,6 +16,8 @@
         <% if OpticFiber.any? %>
           <% if @page.display? %>
             <%= sanitize raw(@page.content_for_locale(current_language)) %>
+          <% else %>
+            <%= render '/welcome/under_construction' %>
           <% end %>
         <% else %>
            <%= render '/welcome/under_construction' %>
