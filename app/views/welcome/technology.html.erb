@@ -13,10 +13,12 @@
     <!-- Left Sidebar -->
     <div class="span9">
       <div class="blog margin-bottom-30">
-        <% if @page.display? %>
-          <%= sanitize raw(@page.content_for_locale(current_language)) %>
+        <% if OpticFiber.any? %>
+          <% if @page.display? %>
+            <%= sanitize raw(@page.content_for_locale(current_language)) %>
+          <% end %>
         <% else %>
-          <%= render '/welcome/under_construction' %>
+           <%= render '/welcome/under_construction' %>
         <% end %>
       </div><!--/blog-->
 
