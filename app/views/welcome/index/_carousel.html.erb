@@ -5,12 +5,12 @@
 <div class="slider-inner">
   <div id="da-slider" class="da-slider">
     <div class="da-slide">
-      <h2><i>Locating &amp; guidance</i></h2>
-      <p><i>an important part of the drilling operation,</i> <br /> <i>as the drilling head is under the ground while drilling and,</i> <br /><i>in most cases, not visible from the ground surface.</i></p>
+      <h2><i><%= t('slider.first_title').html_safe %></i></h2>
+      <p><%= t('slider.first_desc').html_safe %></p>
       <div class="da-img"><%= image_tag "drill1.jpg", style: "max-height: 100%;" %></div>
     </div>
     <div class="da-slide">
-      <h2><i>DEMO VIDEO</i> <br /> <i>OF HOW HORIZONTAL</i> <br /> <i>DIRECTIONAL DRILL WORKS </i></h2>
+      <h2><%= t('slider.second_title').html_safe %></h2>
       <!-- <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i></p> -->
       <div class="da-img span6">
         <div class="span6">
@@ -19,9 +19,11 @@
       </div>
     </div>
     <div class="da-slide">
-      <h2><i>Horizontal Directional</i> <br /> <i> Drilling makes the </i> <br /> <i> impossible possible.</i></h2>
-      <p><i>This technology saves time and money.</i> <br /> <i> Most of the ground surface remains undisturbed,</i> <br /> <i> lessening the environmental impact of placing pipe.</i></p>
-      <div class="da-img"><%= image_tag "drill2.jpg", style: "max-height: 100%;" %></div>
+      <h2><%= t('slider.third_title').html_safe %></h2>
+      <p><%= t('slider.third_desc').html_safe %></p>
+      <div class="da-img">
+        <%= image_tag "drill2.jpg", style: "max-height: 100%;" %>
+      </div>
     </div>
     <nav class="da-arrows">
       <span class="da-arrows-prev"></span>

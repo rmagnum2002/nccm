@@ -37,7 +37,7 @@ App.initFancybox();
               </div>
             </a>
             <h4><%= ut.title %></h4>
-            <p><%= ut.description %> <!-- <a class="read-more" href="#">Read more</a></p> -->
+            <p><%= ut.description.truncate(25, omission: '...') %> <!-- <a class="read-more" href="#">Read more</a></p> -->
           </div>
         </li>
         <% end %>

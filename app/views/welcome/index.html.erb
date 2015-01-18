@@ -31,7 +31,15 @@ Index.initParallaxSlider();
         <i class="icon-check-sign"></i>
         <div class="desc">
           <h4><%= t('main_page.experience') %></h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+          <p>
+            <% if current_language == 'ru' %>
+            Бесценный опыт строительства ГНБ-переходов высочайшей категории сложности обеспечил нам совершенный уровень владения технологией горизонтально-направленного бурения.
+            <% elsif current_language == 'en' %>
+            We have the experience, people, and equipment necessary to complete the most challenging projects. We have a commitment to understanding your goals and tailoring solutions that exceed them.
+            <% else %>
+            Avem experienta, oamenii, și echipamentele necesare pentru a finaliza proiectele cele mai provocatoare. Avem un angajament de a intelege obiectivele si găsim soluții care să le depășesc.
+            <% end %>
+          </p>
         </div>
       </div>
     </div>
@@ -40,7 +48,15 @@ Index.initParallaxSlider();
         <i class="icon-check-sign"></i>
         <div class="desc">
           <h4><%= t('main_page.professionalism') %></h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+          <p>
+            <% if current_language == 'ru' %>
+            Для нас высокий профессионализм специалистов — это не пустой звук. Мы проводим серьёзную подготовку кадров. Во время производства многих работ наши специалисты внесли ценные предложения по сокращению сроков и стоимости бурения. И все эти предложения оправдали себя.
+            <% elsif current_language == 'en' %>
+            We focus not just on projects, but on relationships. We are proud of our record of superior customer service, which has led to our perfect record for repeat busines
+            <% else %>
+            Noi nu ne concentrăm doar pe proiecte, ci pe relații. Suntem mândri de numărul nostru de servicii de calitate clienților, ceea ce a dus la conlucrarea repetată între clienții noștri și compania NCCM.
+            <% end %>
+          </p>
         </div>
       </div>
     </div>
@@ -49,7 +65,15 @@ Index.initParallaxSlider();
         <i class="icon-check-sign"></i>
         <div class="desc">
           <h4><%= t('main_page.quality') %></h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+          <p>
+            <% if current_language == 'ru' %>
+            Широкий парк собственной специализированной строительной техники позволяет нам значительно экономить время на подготовку оборудования к работе и жестко придерживаться договорных сроков.
+            <% elsif current_language == 'en' %>
+            Owning the widest range of modern trenchless equipment, proudly operated by our highly skilled workforce, we have completed hundreds of trenchless crossings with an outstanding track record for installations in all ground conditions.
+            <% else %>
+            Deținem cea mai largă gamă de echipamente de foraj, operate cu mândrie de către persoane înalt calificate, am finisat cu succes sute de lucrări în condiții diferite de teren.
+            <% end %>
+          </p>
         </div>
       </div>
     </div>

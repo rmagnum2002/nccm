@@ -15,6 +15,12 @@ ro:
     optics: "linii fibre optice"
     contacts: "contacte"
     gallery: "Galerie Foto"
+  slider:
+    first_title: 'Localizare și ghidare'
+    first_desc: "<i>un important proces în forare,</i> <br /> <i>așa cum capul de foraj se se află sub pământ și,</i> <br /><i>în majoriatatea cazurilor, nu este vizibilă la suprafață.</i>"
+    second_title: "<i>DEMO VIDEO</i> <br /> <i> CUM LUCREAZĂ FORAREA</i> <br /> <i>ORIZONTALĂ DIRECȚIONATĂ</i>"
+    third_title: "<i>Forarea </i> <br /> <i> Orizontală Direcţionată face </i> <br /> <i> imposibilul posibil.</i>"
+    third_desc: "<i>Această tehnologie economisește timp și bani.</i> <br /> <i> O mare parte a terenului rămâne neafectat,</i> <br /> <i> micșorând impactul asupra mediului în timpul instalării unei conducte.</i>"
   main_page:
     moto: "compania cu cea mai mare experiență în forări subterane din Republica Moldova"
     completed_tasks: "Lucrări finisate"
